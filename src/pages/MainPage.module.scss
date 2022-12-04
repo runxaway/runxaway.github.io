@@ -1,0 +1,127 @@
+.Wrapper {
+    height: 2300px;
+
+    .TopBar {
+        width: 100%;
+        max-height: 61px;
+        display: flex;
+        background-color: #000000;
+        position: fixed;
+        color: #DF4952;
+        justify-content: space-between;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        .Runaway {
+            padding: 15px 107px;
+            width: 134px;
+            height: 31px;
+
+            font-family: 'Arial';
+            font-style: italic;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.05em;
+        }
+
+        .TopContainer {
+            display: flex;
+            padding: 0px 107px;
+
+            .Email {
+                padding-top: 15px;
+                width: 266px;
+                height: 31px;
+
+                font-family: 'Arial';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 23px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                letter-spacing: 0.05em;
+
+                color: #DF4952;
+            }
+
+            .GitIcon {
+                width: 69px;
+                height: 61px;
+            }
+        }
+    }
+
+    .HeaderNoise {
+        width: 100%;
+        pointer-events: none;
+    }
+
+    .Hello{
+        position: absolute;
+        width: 1226px;
+        height: 75px;
+        left: 107px;
+        top: 199px;
+
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 75px;
+
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.05em;
+
+        color: transparent;
+        -webkit-text-stroke-color: #DF4952;
+        -webkit-text-stroke-width: 1px;
+    }
+
+    .HelloTitle{
+        position: absolute;
+        width: 1226px;
+        height: 75px;
+        left: 400px;
+        top: 199px;
+
+        font-family: 'Arial';
+        font-style: italic;
+        font-weight: 700;
+        font-size: 65px;
+        line-height: 75px;
+
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.05em;
+
+        color: #DF4952;
+    }
+
+    .DescriptionTitle {
+        position: absolute;
+        width: 422px;
+        height: 68px;
+        left: 107px;
+        top: 332px;
+
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 34px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.05em;
+
+        color: #FFD0D0;
+    }
+}
