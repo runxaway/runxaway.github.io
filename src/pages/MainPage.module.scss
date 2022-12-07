@@ -1,5 +1,6 @@
 .Wrapper {
     height: 2300px;
+    overflow: hidden;
 
     .TopBar {
         width: 100%;
@@ -7,16 +8,17 @@
         display: flex;
         background-color: #000000;
         position: fixed;
-        color: #DF4952;
+        color: var(--pink-red);
         justify-content: space-between;
         top: 0;
         left: 0;
-        z-index: 1;
+        z-index: 3;
 
         .Runaway {
             padding: 15px 107px;
             width: 134px;
             height: 31px;
+            justify-content: center;
 
             font-family: 'Arial';
             font-style: italic;
@@ -49,7 +51,7 @@
                 text-align: center;
                 letter-spacing: 0.05em;
 
-                color: #DF4952;
+                color: var(--pink-red);
             }
 
             .GitIcon {
@@ -62,6 +64,13 @@
     .HeaderNoise {
         width: 100%;
         pointer-events: none;
+    }
+
+    .AllNoise {
+        position: absolute;
+        width: 100%;
+        pointer-events: none;
+        z-index: 1;
     }
 
     .Hello{
@@ -82,13 +91,13 @@
         letter-spacing: 0.05em;
 
         color: transparent;
-        -webkit-text-stroke-color: #DF4952;
+        -webkit-text-stroke-color: var(--pink-red);
         -webkit-text-stroke-width: 1px;
+        z-index: 2;
     }
 
     .HelloTitle{
         position: absolute;
-        width: 1226px;
         height: 75px;
         left: 400px;
         top: 199px;
@@ -103,7 +112,8 @@
         align-items: center;
         letter-spacing: 0.05em;
 
-        color: #DF4952;
+        color: var(--pink-red);
+        z-index: 2;
     }
 
     .DescriptionTitle {
@@ -122,6 +132,78 @@
         align-items: center;
         letter-spacing: 0.05em;
 
-        color: #FFD0D0;
+        color: var(--light-pink);
+        z-index: 2;
+    }
+
+    .Stars1 {
+        justify-content: space-between;
+        display: flex;
+        margin: 147px 24.5px 67.5px 24.5px;
+    }
+
+    .Stars2 {
+        justify-content: space-between;
+        display: flex;
+        margin: 0px 12px 42.5px 12px;
+    }
+
+    .Stars3 {
+        justify-content: space-between;
+        display: flex;
+        margin: 0px -0.5px 17.5px -0.5px;
+    }
+
+    .Stars4 {
+        justify-content: space-between;
+        display: flex;
+        margin: 0px -13px -20px -13px;
+    }
+
+    .Stars5 {
+        justify-content: space-between;
+        display: flex;
+        margin: 0px -38px -70px -38px;
+
+        .Star5 {
+            margin-left: -45px;
+        }
+    }
+
+    .Stars6 {
+        justify-content: space-between;
+        display: flex;
+        margin: 0px -63px;
+
+        .Star6 {
+            margin-left: -95px;
+        }
+    }
+
+    .Bottom {
+        background-color: var(--pink-red);
+        width: auto;
+        height: 1215px;
+        margin-top: -100px;
+
+        .SkillsTitle {
+            position: absolute;
+            z-index: 2;
+            width: 154px;
+            height: 57px;
+            padding-top: 100px;
+            margin-left: 107px;
+
+            font-family: 'Arial';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 57px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.05em;
+
+            color: var(--light-pink);
+        }
     }
 }

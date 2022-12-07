@@ -35,7 +35,7 @@ const config =  {
           exclude: /node_modules/,
         },
         {
-          test: /\.(png|jpg|jpeg|gif|mp3)$/,
+          test: /\.(png|jpg|jpeg|gif|mp3|ico)$/,
           use: [ {
             loader: "url-loader",
             options: {
@@ -65,7 +65,8 @@ const config =  {
     },
     plugins: [
         new HtmlWebpackPlugin({
-        template: 'public/index.html',
+        template: './public/index.html',
+        filename: './index.html',
         favicon: './public/favicon.ico'
       }),
       new CopyPlugin({patterns: [
