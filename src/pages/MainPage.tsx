@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import styles from './MainPage.module.scss';
 
@@ -17,22 +17,29 @@ import star6 from '../images/Stars/star6.svg';
 const MainPage = (): JSX.Element => {
     const starsField = (image: string) => {
         return (
-            <div className={`${image == star1 ? styles.Stars1 : ''} ${image == star2 ? styles.Stars2 : ''} ${image == star3 ? styles.Stars3 : ''} ${image == star4 ? styles.Stars4 : ''} ${image == star5 ? styles.Stars5 : ''} ${image == star6 ? styles.Stars6 : ''
-                }`}
+            <div className={`
+                ${image == star1 ? styles.Stars1 : ''}
+                ${image == star2 ? styles.Stars2 : ''}
+                ${image == star3 ? styles.Stars3 : ''}
+                ${image == star4 ? styles.Stars4 : ''}
+                ${image == star5 ? styles.Stars5 : ''}
+                ${image == star6 ? styles.Stars6 : ''}
+            `}
             >
                 {Array.from(Array(14).keys())
                     .map((index) => {
                         return (
                             <img
                                 key={index}
-                                className={`${image == star1 && index != 0
-                                    ? styles.Star1 : ''} ${image == star2 && index != 0
-                                        ? styles.Star2 : ''} ${image == star3 && index != 0
-                                            ? styles.Star3 : ''} ${image == star4 && index != 0
-                                                ? styles.Star4 : ''} ${image == star5 && index != 0
-                                                    ? styles.Star5 : ''} ${image == star6 && index != 0
-                                                        ? styles.Star6 : ''
-                                    }`}
+                                className={`
+                                    ${styles.Hover}
+                                    ${image == star1 ? styles.Star1 : ''}
+                                    ${image == star2 ? styles.Star2 : ''}
+                                    ${image == star3 ? styles.Star3 : ''}
+                                    ${image == star4 ? styles.Star4 : ''}
+                                    ${image == star5 ? styles.Star5 : ''}
+                                    ${image == star6 ? styles.Star6 : ''}
+                                `}
                                 src={image}
                             />
                         );
@@ -40,9 +47,7 @@ const MainPage = (): JSX.Element => {
             </div>
         );
     };
-    // () => {
-    //     const stars = document.querySelectorAll('.Star1 .Star2 .Star3 .Star4 .Star5 .Star6');
-    // }
+
     return (
         <div className={styles.Wrapper}>
             <img
@@ -70,14 +75,12 @@ const MainPage = (): JSX.Element => {
                 <br></br>
                 & front-end web developer
             </h1>
-            <div className={styles.StarsWrapper}>
-                {starsField(star1)}
-                {starsField(star2)}
-                {starsField(star3)}
-                {starsField(star4)}
-                {starsField(star5)}
-                {starsField(star6)}
-            </div>
+            {starsField(star1)}
+            {starsField(star2)}
+            {starsField(star3)}
+            {starsField(star4)}
+            {starsField(star5)}
+            {starsField(star6)}
             <div className={styles.Bottom}>
                 <h1 className={styles.SkillsTitle}>Skills</h1>
             </div>

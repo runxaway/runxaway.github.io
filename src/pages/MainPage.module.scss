@@ -70,7 +70,7 @@
     .AllNoise {
         position: absolute;
         width: 100%;
-        height: calc(2300px);
+        height: 2300px;
         pointer-events: none;
         z-index: 1;
     }
@@ -138,83 +138,117 @@
         z-index: 2;
     }
 
-    .StarsWrapper {
-        pointer-events: none;
+    .Stars1 {
+        // justify-content: space-between;
+        // display: flex;
+        display: grid;
+        grid-template-columns: repeat(14, 105px);
+        margin: 147px 24.5px 67.5px 24.5px;
 
-        .Stars1 {
-            // grid-template-columns: repeat(14, minmax(105px, auto));
-            // display: grid;
-            justify-content: space-between;
-            display: flex;
-            padding: 147px 24.5px 67.5px 24.5px;
-
-            .Star1 {
-                transition: all 300ms ease;
-            }
-        }
-
-        .Stars2 {
-            // grid-template-columns: repeat(14, 105px);
-            // display: grid;
-            justify-content: space-between;
-            display: flex;
-            margin: 0px 12px 42.5px 12px;
-
-            .Star2 {
-                transition: all 300ms ease;
-            }
-        }
-
-        .Stars3 {
-            // grid-template-columns: repeat(14, 105px);
-            // display: grid;
-            justify-content: space-between;
-            display: flex;
-            margin: 0px -0.5px 17.5px -0.5px;
-
-            .Star3 {
-                transition: all 300ms ease;
-            }
-        }
-
-        .Stars4 {
-            // grid-template-columns: repeat(14, 105px);
-            // display: grid;
-            justify-content: space-between;
-            display: flex;
-            margin: 0px -13px -20px -13px;
-
-            .Star4 {
-                transition: all 300ms ease;
-            }
-        }
-
-        .Stars5 {
-            // grid-template-columns: repeat(14, 105px);
-            // display: grid;
-            justify-content: space-between;
-            display: flex;
-            margin: 0px -38px -70px -38px;
-
-            .Star5 {
-                transition: all 300ms ease;
-                margin-left: -45px;
-            }
-        }
-
-        .Stars6 {
-            // grid-template-columns: repeat(14, 105px);
-            // display: grid;
-            justify-content: space-between;
-            display: flex;
-            margin: 0px -63px;
-
-            .Star6 {
-                transition: all 300ms ease;
-                margin-left: -95px;
-            }
+        .Star1 {
+            position: relative;
+            transition: all 300ms ease;
         }
     }
+
+    .Stars2 {
+        // justify-content: space-between;
+        // display: flex;
+        display: grid;
+        grid-template-columns: repeat(14, 105px);
+        margin: 0px 12px 42.5px 12px;
+
+        .Star2 {
+            position: relative;
+            transition: all 300ms ease;
+        }
+    }
+
+    .Stars3 {
+        // justify-content: space-between;
+        // display: flex;
+        display: grid;
+        grid-template-columns: repeat(14, 105px);
+        margin: 0px -0.5px 17.5px -0.5px;
+
+        .Star3 {
+            position: relative;
+            transition: all 300ms ease;
+        }
+    }
+
+    .Stars4 {
+        // justify-content: space-between;
+        // display: flex;
+        display: grid;
+        grid-template-columns: repeat(14, 105px);
+        margin: 0px -13px -20px -13px;
+
+        .Star4 {
+            position: relative;
+            transition: all 300ms ease;
+        }
+    }
+
+    .Stars5 {
+        // justify-content: space-between;
+        // display: flex;
+        display: grid;
+        grid-template-columns: repeat(14, 105px);
+        margin: 0px -15px -37px -15px;
+        height: 117px;
+        object-fit: cover;
+        overflow:-moz-hidden-unscrollable;
+
+        .Star5 {
+            width: 105px;
+            height: 151px;
+            object-fit: cover;
+            position: relative;
+            transition: all 300ms ease;
+        }
+
+        // .Margin5 {
+        //     position: relative;
+        //     transition: all 300ms ease;
+        //     margin-left: -45px;
+        // }
+    }
+
+    .Stars6 {
+        // justify-content: space-between;
+        // display: flex;
+        display: grid;
+        grid-template-columns: repeat(14, 105px);
+        margin: 0px -15px;
+        overflow: hidden;
+
+        .Star6 {
+            width: 105px;
+            height: 200px;
+            object-fit: cover;
+            position: relative;
+            transition: all 300ms ease;
+        }
+
+        // .Margin6 {
+        //     background-color: aliceblue;
+        //     background: transparent;
+        //     position: relative;
+        //     transition: all 300ms ease;
+        //     margin-left: -95px;
+        // }
+    }
+
+    .Hover {
+        position: relative;
+        transition: all 300ms ease;
+
+        &:hover {
+            transform: scale(2);
+        }
+    }
+
 
     .Bottom {
         background-color: var(--pink-red);
@@ -241,5 +275,12 @@
 
             color: var(--light-pink);
         }
+    }
+
+    img {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
     }
 }
