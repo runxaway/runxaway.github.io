@@ -13,10 +13,10 @@
         justify-content: space-between;
         top: 0;
         left: 0;
-        z-index: 3;
+        z-index: 4;
 
         .Runaway {
-            margin: 15px 107px;
+            margin: 14px 107px;
             width: 134px;
             height: 31px;
             justify-content: center;
@@ -24,7 +24,7 @@
             font-family: 'Arial';
             font-style: italic;
             font-weight: 700;
-            font-size: 24px;
+            font-size: 22px;
             line-height: 28px;
             display: flex;
             align-items: center;
@@ -44,7 +44,7 @@
                 font-family: 'Arial';
                 font-style: normal;
                 font-weight: 400;
-                font-size: 20px;
+                font-size: 19px;
                 line-height: 23px;
                 display: flex;
                 justify-content: center;
@@ -57,7 +57,7 @@
 
             .GitIcon {
                 width: 69px;
-                height: 61px;
+                height: 60px;
             }
         }
     }
@@ -72,7 +72,7 @@
         width: 100%;
         height: 2300px;
         pointer-events: none;
-        z-index: 1;
+        z-index: 2;
     }
 
     .Hello {
@@ -95,7 +95,7 @@
         color: transparent;
         -webkit-text-stroke-color: var(--pink-red);
         -webkit-text-stroke-width: 1px;
-        z-index: 2;
+        z-index: 3;
     }
 
     .HelloTitle {
@@ -115,7 +115,7 @@
         letter-spacing: 0.05em;
 
         color: var(--pink-red);
-        z-index: 2;
+        z-index: 3;
     }
 
     .DescriptionTitle {
@@ -135,7 +135,7 @@
         letter-spacing: 0.05em;
 
         color: var(--light-pink);
-        z-index: 2;
+        z-index: 3;
     }
 
     .Stars1 {
@@ -187,6 +187,7 @@
         .Star4 {
             position: relative;
             transition: all 300ms ease;
+            z-index: 1;
         }
     }
 
@@ -195,10 +196,9 @@
         // display: flex;
         display: grid;
         grid-template-columns: repeat(14, 105px);
-        margin: 0px -15px -37px -15px;
-        height: 117px;
+        margin: 0px -15px -70px -15px;
         object-fit: cover;
-        overflow:-moz-hidden-unscrollable;
+        height: 151px;
 
         .Star5 {
             width: 105px;
@@ -255,25 +255,393 @@
         width: 100%;
         height: 100%;
         margin-top: -100px;
+        display: flex;
 
-        .SkillsTitle {
-            position: relative;
-            z-index: 2;
-            width: 154px;
-            height: 57px;
+        .SkillsWrapper {
+            padding-left: 107px;
             padding-top: 100px;
+            z-index: 3;
+            position: relative;
+
+            .SkillsTitle {
+                width: 154px;
+                height: 57px;
+
+                font-family: 'Arial';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 50px;
+                line-height: 57px;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.05em;
+
+                color: var(--light-pink);
+            }
+
+            .FirstRow {
+                display: flex;
+                padding-top: 40px;
+                width: 756px;
+
+                .HTML5Box {
+                    display: flex;
+                    width: 197px;
+                    height: 80px;
+                    align-items: center;
+
+                    .HTML5Title {
+                        width: 102px;
+                        height: 31px;
+                        padding-left: 15px;
+
+                        font-family: 'Arial';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 27px;
+                        line-height: 31px;
+
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.05em;
+
+                        color: #000000;
+                    }
+                }
+
+                .CSS3Box {
+                    display: flex;
+                    padding-left: 110px;
+                    width: 179px;
+                    height: 80px;
+                    align-items: center;
+
+                    .CSS3Title {
+                        width: 84px;
+                        height: 31px;
+                        padding-left: 15px;
+
+                        font-family: 'Arial';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 27px;
+                        line-height: 31px;
+
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.05em;
+
+                        color: #000000;
+                    }
+                }
+
+                .SassBox {
+                    display: flex;
+                    padding-left: 220px;
+                    width: 160px;
+                    height: 80px;
+                    align-items: center;
+
+                    .SassTitle {
+                        width: 65px;
+                        height: 31px;
+                        padding-left: 25px;
+
+                        font-family: 'Arial';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 27px;
+                        line-height: 31px;
+
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.05em;
+
+                        color: #000000;
+                    }
+                }
+            }
+
+            .SecRow {
+                display: flex;
+                padding-top: 60px;
+                width: 756px;
+
+                .TSBox {
+                    display: flex;
+                    width: 235px;
+                    height: 80px;
+                    align-items: center;
+
+                    .TSTitle {
+                        width: 140px;
+                        height: 31px;
+                        padding-left: 15px;
+
+                        font-family: 'Arial';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 27px;
+                        line-height: 31px;
+
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.05em;
+
+                        color: #000000;
+                    }
+                }
+
+                .ReactBox {
+                    display: flex;
+                    padding-left: 67px;
+                    width: 171px;
+                    height: 80px;
+                    align-items: center;
+
+                    .ReactTitle {
+                        width: 76px;
+                        height: 31px;
+                        padding-left: 15px;
+
+                        font-family: 'Arial';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 27px;
+                        line-height: 31px;
+
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.05em;
+
+                        color: #000000;
+                    }
+                }
+
+                .WPBox {
+                    display: flex;
+                    padding-left: 135px;
+                    width: 216px;
+                    height: 80px;
+                    align-items: center;
+
+                    .WPTitle {
+                        width: 121px;
+                        height: 31px;
+                        padding-left: 15px;
+
+                        font-family: 'Arial';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 27px;
+                        line-height: 31px;
+
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.05em;
+
+                        color: #000000;
+                    }
+                }
+            }
+
+            .Border {
+                padding-top: 40px;
+            }
+
+            .ThirdRow {
+                display: flex;
+                padding-top: 40px;
+                width: 517px;
+                height: 80px;
+
+                .AiBox {
+                    display: flex;
+                    width: 320px;
+                    height: 80px;
+                    align-items: center;
+
+                    .AiTitle {
+                        width: 220px;
+                        height: 31px;
+                        margin-left: 15px;
+
+                        font-family: 'Arial';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 27px;
+                        line-height: 31px;
+
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.05em;
+
+                        color: #000000;
+                    }
+                }
+
+                .FigmaBox {
+                    display: flex;
+                    padding-left: 23px;
+                    width: 176px;
+                    height: 80px;
+                    align-items: center;
+
+                    .FigmaTitle {
+                        width: 81px;
+                        height: 31px;
+                        padding-left: 15px;
+
+                        font-family: 'Arial';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 27px;
+                        line-height: 31px;
+
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 0.05em;
+
+                        color: #000000;
+                    }
+                }
+            }
+        }
+
+        .Learn {
+            width: 379px;
+            height: 195px;
+            margin-top: 106px;
+            margin-left: 91px;
+            z-index: 3;
+            position: relative;
+
+            .LearnTitle {
+                width: 400px;
+                margin-bottom: 30px;
+
+                font-family: 'Arial';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 46px;
+
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.05em;
+
+                color: var(--light-pink);
+            }
+
+            .LearnRow {
+                height: 33px;
+                margin-bottom: 25px;
+                display: flex;
+                align-items: center;
+
+                .StarBlack {
+                    height: 35px;
+                }
+
+                .RowTitle {
+                    text-decoration: none;
+                    height: 46px;
+                    margin-left: 18px;
+
+                    font-family: 'Arial';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 40px;
+                    line-height: 46px;
+
+                    display: inline-block;
+                    position: relative;
+                    align-items: center;
+                    letter-spacing: 0.05em;
+
+                    color: #000000;
+                }
+
+                .RowTitle::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 3px;
+                    background-color: var(--light-pink);
+                    transition: width 0.25s ease-out;
+                }
+
+                .RowTitle:hover::before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .BigStarBlack {
+            margin-top: 266px;
+            margin-left: -324.5px;
+            height: 788px;
+            position: relative;
+            transition: all 800ms ease;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        .ExpWrapper {
+            position: absolute;
+            width: 1028px;
+            height: 287px;
+            z-index: 3;
             margin-left: 107px;
+            margin-top: 722px;
 
-            font-family: 'Arial';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 50px;
-            line-height: 57px;
-            display: flex;
-            align-items: center;
-            letter-spacing: 0.05em;
+            .ExpTitle {
+                width: 290px;
+                height: 57px;
 
-            color: var(--light-pink);
+                font-family: 'Arial';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 50px;
+                line-height: 57px;
+                display: flex;
+                align-items: center;
+                letter-spacing: 0.05em;
+
+                color: var(--light-pink);
+            }
+
+            .ExpRow {
+                display: flex;
+                align-items: center;
+                margin-top: 40px;
+
+                .StarWhite {
+                    height: 35px;
+                }
+
+                .Exph1 {
+                    margin-left: 18px;
+                    height: 40px;
+                    left: 165px;
+                    top: 1905px;
+
+                    font-family: 'Arial';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 35px;
+                    line-height: 40px;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0.05em;
+
+                    color: var(--light-pink);
+                }
+            }
         }
     }
 
@@ -282,5 +650,12 @@
         -khtml-user-drag: none;
         -moz-user-drag: none;
         -o-user-drag: none;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
 }
