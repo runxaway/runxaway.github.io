@@ -69,11 +69,10 @@
             .GitWrap {
                 width: 69px;
                 height: 61px;
-                // display: flex;
-                display: block;
+                display: flex;
                 align-items: center;
                 justify-content: center;
-                background: url("/public/githubIcon.svg") no-repeat;
+                background: url("../images/githubIcon.svg") no-repeat;
 
                 .GitIcon {
                     height: 23px;

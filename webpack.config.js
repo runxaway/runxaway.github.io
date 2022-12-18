@@ -35,6 +35,10 @@ const config = {
           },
           {
             loader: "css-loader",
+            options: {
+              url: true,
+              esModule: false,
+            }
           },
           {
             loader: "resolve-url-loader",
@@ -62,7 +66,7 @@ const config = {
         test: /\.svg$/,
         use: [
           {
-            loader: 'svg-url-loader',
+            loader: 'url-loader',
             options: {
               limit: 10000,
             },
@@ -90,9 +94,13 @@ const config = {
         {
           from: 'src/favicons',
           to: 'favicons'
-        }
-      ]
-    })
+        },
+        {
+          from: 'src/images',
+          to: 'images'
+        },
+      ],
+    }),
   ],
   devServer: {
     historyApiFallback: true,
@@ -115,6 +123,6 @@ const config = {
         'Origin, X-Requested-With, Content-Type, Accept',
     },
   },
-}
+};
 
 export default config;
