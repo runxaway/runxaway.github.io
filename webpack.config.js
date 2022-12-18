@@ -29,19 +29,31 @@ const config = {
       },
       {
         test: /\.(css|sass|scss)$/,
-        use: ["style-loader", "css-loader", 'sass-loader', "resolve-url-loader", {
-          loader: "sass-loader", options: {
-            sourceMap: true,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+          },
+          {
+            loader: "resolve-url-loader",
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: true,
+            }
           }
-        }],
+        ],
         exclude: /node_modules/,
       },
       {
         test: /\.(png|jpg|jpeg|gif|mp3|ico)$/,
         use: [{
-          loader: "url-loader",
+          loader: "file-loader",
           options: {
-            name: '[hash]-[name].[ext]',
+            name: 'images/[hash]-[name].[ext]',
             esModule: false,
           },
         }],
@@ -59,6 +71,7 @@ const config = {
       },
     ],
   },
+  devtool: 'inline-source-map',
   resolve: {
     alias: {
       'images': path.resolve(__dirname, '/src/images/')
@@ -77,10 +90,6 @@ const config = {
         {
           from: 'src/favicons',
           to: 'favicons'
-        },
-        {
-          from: 'src/images',
-          to: 'images'
         }
       ]
     })

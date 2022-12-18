@@ -5,7 +5,7 @@ import styles from './MainPage.module.scss';
 import githubIcon from '../images/githubIcon.svg';
 
 import headerNoise from '../images/HNoise.png';
-import AllNoise from '../images/AllNoise.png';
+import ANoise from '../images/AllNoise.png';
 
 import star1 from '../images/Stars/star1.svg';
 import star2 from '../images/Stars/star2.svg';
@@ -66,16 +66,21 @@ const MainPage = (): JSX.Element => {
         <div className={styles.Wrapper}>
             <img
                 className={styles.AllNoise}
-                src={AllNoise}
+                src={ANoise}
             />
             <header className={styles.TopBar}>
                 <h1 className={styles.Runaway}>runaway</h1>
                 <div className={styles.TopContainer}>
                     <a href='mailto:adsharnin@gmail.com' className={styles.Email}>adsharnin@gmail.com</a>
-                    <img
-                        className={styles.GitIcon}
-                        src={githubIcon}
-                    />
+                    <div className={styles.GitWrap}>
+                        {/* <img
+                            className={styles.GitIcon}
+                            src={githubIcon}
+                            onClick={() => {
+                                window.open('https://github.com/runxaway')
+                            }}
+                        /> */}
+                    </div>
                 </div>
             </header>
             <img
@@ -96,82 +101,84 @@ const MainPage = (): JSX.Element => {
             {starsField(star5)}
             {starsField(star6)}
             <div className={styles.Bottom}>
-                <div className={styles.SkillsWrapper}>
-                    <h1 className={styles.SkillsTitle}>Skills</h1>
-                    <div className={styles.FirstRow}>
-                        <div className={styles.HTML5Box}>
-                            <img
-                                src={HTML5Icon}
-                            />
-                            <h1 className={styles.HTML5Title}>HTML5</h1>
+                <div style={{'display': 'flex'}}>
+                    <div className={styles.SkillsWrapper}>
+                        <h1 className={styles.SkillsTitle}>Skills</h1>
+                        <div className={styles.FirstRow}>
+                            <div className={styles.HTML5Box}>
+                                <img
+                                    src={HTML5Icon}
+                                />
+                                <h1 className={styles.HTML5Title}>HTML5</h1>
+                            </div>
+                            <div className={styles.CSS3Box}>
+                                <img
+                                    src={CSS3Icon}
+                                />
+                                <h1 className={styles.CSS3Title}>CSS3</h1>
+                            </div>
+                            <div className={styles.SassBox}>
+                                <img
+                                    src={SASSIcon}
+                                />
+                                <h1 className={styles.SassTitle}>Sass</h1>
+                            </div>
                         </div>
-                        <div className={styles.CSS3Box}>
-                            <img
-                                src={CSS3Icon}
-                            />
-                            <h1 className={styles.CSS3Title}>CSS3</h1>
+                        <div className={styles.SecRow}>
+                            <div className={styles.TSBox}>
+                                <img
+                                    src={TSIcon}
+                                />
+                                <h1 className={styles.TSTitle}>TypeScript</h1>
+                            </div>
+                            <div className={styles.ReactBox}>
+                                <img
+                                    src={ReactIcon}
+                                />
+                                <h1 className={styles.ReactTitle}>React</h1>
+                            </div>
+                            <div className={styles.WPBox}>
+                                <img
+                                    src={WPIcon}
+                                />
+                                <h1 className={styles.WPTitle}>Webpack</h1>
+                            </div>
                         </div>
-                        <div className={styles.SassBox}>
-                            <img
-                                src={SASSIcon}
-                            />
-                            <h1 className={styles.SassTitle}>Sass</h1>
-                        </div>
-                    </div>
-                    <div className={styles.SecRow}>
-                        <div className={styles.TSBox}>
-                            <img
-                                src={TSIcon}
-                            />
-                            <h1 className={styles.TSTitle}>TypeScript</h1>
-                        </div>
-                        <div className={styles.ReactBox}>
-                            <img
-                                src={ReactIcon}
-                            />
-                            <h1 className={styles.ReactTitle}>React</h1>
-                        </div>
-                        <div className={styles.WPBox}>
-                            <img
-                                src={WPIcon}
-                            />
-                            <h1 className={styles.WPTitle}>Webpack</h1>
-                        </div>
-                    </div>
-                    <img
-                        className={styles.Border}
-                        src={Border}
-                    />
-                    <div className={styles.ThirdRow}>
-                        <div className={styles.AiBox}>
-                            <img
-                                src={AiIcon}
-                            />
-                            <h1 className={styles.AiTitle}>Adobe Illustrator</h1>
-                        </div>
-                        <div className={styles.FigmaBox}>
-                            <img
-                                src={FigmaIcon}
-                            />
-                            <h1 className={styles.FigmaTitle}>Figma</h1>
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.Learn}>
-                    <h1 className={styles.LearnTitle}>Currently learning</h1>
-                    <div className={styles.LearnRow}>
                         <img
-                            className={styles.StarBlack}
-                            src={StarBlack}
+                            className={styles.Border}
+                            src={Border}
                         />
-                        <a href='https://threejs.org/' className={styles.RowTitle}>three.js</a>
+                        <div className={styles.ThirdRow}>
+                            <div className={styles.AiBox}>
+                                <img
+                                    src={AiIcon}
+                                />
+                                <h1 className={styles.AiTitle}>Adobe Illustrator</h1>
+                            </div>
+                            <div className={styles.FigmaBox}>
+                                <img
+                                    src={FigmaIcon}
+                                />
+                                <h1 className={styles.FigmaTitle}>Figma</h1>
+                            </div>
+                        </div>
                     </div>
-                    <div className={styles.LearnRow}>
-                        <img
-                            className={styles.StarBlack}
-                            src={StarBlack}
-                        />
-                        <a href='https://p5js.org/' className={styles.RowTitle}>p5.js</a>
+                    <div className={styles.Learn}>
+                        <h1 className={styles.LearnTitle}>Currently learning</h1>
+                        <div className={styles.LearnRow}>
+                            <img
+                                className={styles.StarBlack}
+                                src={StarBlack}
+                            />
+                            <a href="https://threejs.org/" target="_blank" className={styles.RowTitle}>three.js</a>
+                        </div>
+                        <div className={styles.LearnRow}>
+                            <img
+                                className={styles.StarBlack}
+                                src={StarBlack}
+                            />
+                            <a href="https://p5js.org/" target="_blank" className={styles.RowTitle}>p5.js</a>
+                        </div>
                     </div>
                 </div>
                 <img
@@ -187,7 +194,14 @@ const MainPage = (): JSX.Element => {
                         />
                         <h1 className={styles.Exph1}>Internship - VibeLab (July 2022 - November 2022)</h1>
                     </div>
+                    <h2 className={styles.ExpText}>
+                        Successfully completed an internship as a front-end developer in the IT laboratory at Saint Petersburg 
+                        Electrotechnical University "LETI" -
+                        <a href="https://vibelab.etu.ru/" target="_blank" className={styles.VibeLab}>VibeLab</a>. 
+                        The theme of the project was to create an application - an educational platform.
+                    </h2>
                 </div>
+                <h1 className={styles.Copyright}>Designed and coded by Alexander Sharnin © 2022</h1>
             </div>
         </div>
     );
