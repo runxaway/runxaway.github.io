@@ -1,13 +1,33 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.2353d1b4.js",
+    "main.css": "/static/css/main.f60b581d.css",
+    "main.js": "/static/js/main.1b4ada52.js",
+    "static/media/AllNoise.png": "/static/media/AllNoise.10a206c165c9e50bff78.png",
+    "static/media/HNoise.png": "/static/media/HNoise.0c960815de9d74067d7e.png",
+    "static/media/SASSIcon.svg": "/static/media/SASSIcon.a148d986ee3f1279efcb85c55d99b309.svg",
+    "static/media/ReactIcon.svg": "/static/media/ReactIcon.a0340a809b37927089ae8f3f23b6f94c.svg",
+    "static/media/AiIcon.svg": "/static/media/AiIcon.19a4b0cbabd142eab614cd8f5bd56c98.svg",
+    "static/media/TSIcon.svg": "/static/media/TSIcon.5875e7cc2458dc434dd5ae278f4b9f7c.svg",
+    "static/media/CSS3Icon.svg": "/static/media/CSS3Icon.f86df26a3723ffe4173622a96baebb9b.svg",
+    "static/media/FigmaIcon.svg": "/static/media/FigmaIcon.2daec0f3f1a534af87e401bd5b09e760.svg",
+    "static/media/WPIcon.svg": "/static/media/WPIcon.ba842509c9d611f15bb97eb6c43bc45a.svg",
+    "static/media/HTML5Icon.svg": "/static/media/HTML5Icon.44a0346fcd786ec8e297a2dde7786169.svg",
     "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.2353d1b4.js.map": "/static/js/main.2353d1b4.js.map"
+    "static/media/star6.svg": "/static/media/star6.bc740f7fe315c1e462a643c4a38aaf60.svg",
+    "static/media/star4.svg": "/static/media/star4.6f79eae2d855fd0e87609c311dfac010.svg",
+    "static/media/star5.svg": "/static/media/star5.9f0142cab1cc1383a7063b0c335bc434.svg",
+    "static/media/star1.svg": "/static/media/star1.b05ef802b3386fe48f03f371bd202be2.svg",
+    "static/media/star3.svg": "/static/media/star3.e6e8fd4b1d815d5e0f8b2b9b15edca1d.svg",
+    "static/media/star2.svg": "/static/media/star2.659ac776f81d4f5fca85c9eeb3fcf7f3.svg",
+    "static/media/BigStarBlack.svg": "/static/media/BigStarBlack.063f691d751d0bd6c285.svg",
+    "static/media/StarWhite.svg": "/static/media/StarWhite.f8a4a2bd849a7611583b0ace89fd71e8.svg",
+    "static/media/StarBlack.svg": "/static/media/StarBlack.9b77a0e203af068161e2c583a9041fd8.svg",
+    "static/media/Border.svg": "/static/media/Border.d9c0694d46cf48a7446dd248ae484809.svg",
+    "main.f60b581d.css.map": "/static/css/main.f60b581d.css.map",
+    "main.1b4ada52.js.map": "/static/js/main.1b4ada52.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.2353d1b4.js"
+    "static/css/main.f60b581d.css",
+    "static/js/main.1b4ada52.js"
   ]
 }
