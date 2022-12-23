@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useRef } from 'react';
 
 import styles from './MainPage.module.scss';
-
-import githubIcon from '../images/githubIcon.svg';
 
 import headerNoise from '../images/HNoise.png';
 import ANoise from '../images/AllNoise.png';
@@ -29,6 +27,12 @@ import AiIcon from '../images/AiIcon.svg';
 import FigmaIcon from '../images/FigmaIcon.svg';
 
 const MainPage = (): JSX.Element => {
+    const headPoint = useRef<HTMLHeadingElement>(null);
+
+    const scrollUp = () => {
+        headPoint.current?.scrollIntoView({behavior: 'smooth'});
+    }
+
     const starsField = (image: string) => {
         return (
             <div className={`
@@ -63,23 +67,32 @@ const MainPage = (): JSX.Element => {
     };
 
     return (
-        <div className={styles.Wrapper}>
+        <div ref={headPoint} className={styles.Wrapper}>
             <img
                 className={styles.AllNoise}
                 src={ANoise}
             />
             <header className={styles.TopBar}>
-                <h1 className={styles.Runaway}>runaway</h1>
+                <div
+                    className={styles.Runaway}
+                    onClick={scrollUp}
+                >
+                    <div className={styles.Letter}>r</div>
+                    <div className={styles.Letter}>u</div>
+                    <div className={styles.Letter}>n</div>
+                    <div className={styles.Letter}>a</div>
+                    <div className={styles.Letter}>w</div>
+                    <div className={styles.Letter}>a</div>
+                    <div className={styles.Letter}>y</div>
+                </div>
                 <div className={styles.TopContainer}>
                     <a href='mailto:adsharnin@gmail.com' className={styles.Email}>adsharnin@gmail.com</a>
                     <div className={styles.GitWrap}>
-                        {/* <img
-                            className={styles.GitIcon}
-                            src={githubIcon}
-                            onClick={() => {
-                                window.open('https://github.com/runxaway')
-                            }}
-                        /> */}
+                        <a href='https://github.com/runxaway' target="_blank" className={styles.GitIcon}>
+                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fillRule="evenodd" clipRule="evenodd" d="M11.5 0.283703C5.14625 0.283703 0 5.42995 0 11.7837C0 16.8725 3.29187 21.1706 7.86312 22.6943C8.43812 22.795 8.65375 22.45 8.65375 22.1481C8.65375 21.875 8.63938 20.9693 8.63938 20.0062C5.75 20.5381 5.0025 19.3018 4.7725 18.655C4.64313 18.3243 4.0825 17.3037 3.59375 17.0306C3.19125 16.815 2.61625 16.2831 3.57938 16.2687C4.485 16.2543 5.13187 17.1025 5.3475 17.4475C6.3825 19.1868 8.03563 18.6981 8.69688 18.3962C8.7975 17.6487 9.09938 17.1456 9.43 16.8581C6.87125 16.5706 4.1975 15.5787 4.1975 11.18C4.1975 9.92933 4.64312 8.89433 5.37625 8.08933C5.26125 7.80183 4.85875 6.62308 5.49125 5.04183C5.49125 5.04183 6.45438 4.73995 8.65375 6.22058C9.57375 5.96183 10.5513 5.83245 11.5288 5.83245C12.5063 5.83245 13.4838 5.96183 14.4038 6.22058C16.6031 4.72558 17.5662 5.04183 17.5662 5.04183C18.1987 6.62308 17.7962 7.80183 17.6812 8.08933C18.4144 8.89433 18.86 9.91495 18.86 11.18C18.86 15.5931 16.1719 16.5706 13.6131 16.8581C14.03 17.2175 14.3894 17.9075 14.3894 18.9856C14.3894 20.5237 14.375 21.76 14.375 22.1481C14.375 22.45 14.5906 22.8093 15.1656 22.6943C19.7081 21.1706 23 16.8581 23 11.7837C23 5.42995 17.8538 0.283703 11.5 0.283703V0.283703Z" fill="currentcolor" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </header>
@@ -101,7 +114,7 @@ const MainPage = (): JSX.Element => {
             {starsField(star5)}
             {starsField(star6)}
             <div className={styles.Bottom}>
-                <div style={{'display': 'flex'}}>
+                <div style={{ 'display': 'flex' }}>
                     <div className={styles.SkillsWrapper}>
                         <h1 className={styles.SkillsTitle}>Skills</h1>
                         <div className={styles.FirstRow}>
@@ -181,10 +194,11 @@ const MainPage = (): JSX.Element => {
                         </div>
                     </div>
                 </div>
-                <img
+                <div
                     className={styles.BigStarBlack}
-                    src={BigStarBlack}
-                />
+                    // src={BigStarBlack}
+                >
+                </div>
                 <div className={styles.ExpWrapper}>
                     <h1 className={styles.ExpTitle}>Experience</h1>
                     <div className={styles.ExpRow}>
@@ -195,9 +209,9 @@ const MainPage = (): JSX.Element => {
                         <h1 className={styles.Exph1}>Internship - VibeLab (July 2022 - November 2022)</h1>
                     </div>
                     <h2 className={styles.ExpText}>
-                        Successfully completed an internship as a front-end developer in the IT laboratory at Saint Petersburg 
+                        Successfully completed an internship as a front-end developer in the IT laboratory at Saint Petersburg
                         Electrotechnical University "LETI" -
-                        <a href="https://vibelab.etu.ru/" target="_blank" className={styles.VibeLab}>VibeLab</a>. 
+                        <a href="https://vibelab.etu.ru/" target="_blank" className={styles.VibeLab}>VibeLab</a>.
                         The theme of the project was to create an application - an educational platform.
                     </h2>
                 </div>
