@@ -100,8 +100,10 @@ const MainPage = (): JSX.Element => {
                 className={styles.HeaderNoise}
                 src={headerNoise}
             />
-            <h1 className={styles.Hello}>Hey! I'm</h1>
-            <h1 className={styles.HelloTitle}>Alexander Sharnin</h1>
+            <div className={styles.HelloWrap}>
+                <h1 className={styles.Hello}>Hey! I'm</h1>
+                <h1 className={styles.HelloTitle}>Alexander Sharnin</h1>
+            </div>
             <h1 className={styles.DescriptionTitle}>
                 I’m a UI/UX designer
                 <br></br>

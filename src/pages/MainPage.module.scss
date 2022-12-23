@@ -1,18 +1,18 @@
 .Wrapper {
-    height: auto;
-    width: auto;
+    height: 2300px;
+    width: 1440px;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
 
     .TopBar {
-        width: 100%;
+        width: 1440px;
         max-height: 61px;
         display: flex;
         background-color: #000000;
         position: fixed;
         color: var(--pink-red);
         justify-content: space-between;
-        top: 0;
-        left: 0;
         z-index: 4;
 
         .Runaway {
@@ -104,59 +104,62 @@
         top: 0;
         bottom: 0;
         width: 100%;
+        height: 2300px;
         pointer-events: none;
         z-index: 2;
     }
 
-    .Hello {
-        position: absolute;
+    .HelloWrap {
+        display: flex;
         width: 1226px;
         height: 75px;
-        left: 107px;
-        top: 199px;
+        margin-left: 107px;
+        margin-top: -199px;
 
-        font-family: 'Arial';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 65px;
-        line-height: 75px;
+        .Hello {
+            // position: absolute;
 
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.05em;
+            font-family: 'Arial';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 65px;
+            line-height: 75px;
 
-        color: transparent;
-        -webkit-text-stroke-color: var(--pink-red);
-        -webkit-text-stroke-width: 1px;
-        z-index: 3;
-    }
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.05em;
 
-    .HelloTitle {
-        position: absolute;
-        height: 75px;
-        left: 400px;
-        top: 199px;
+            color: transparent;
+            -webkit-text-stroke-color: var(--pink-red);
+            -webkit-text-stroke-width: 1px;
+            z-index: 3;
+        }
 
-        font-family: 'Arial';
-        font-style: italic;
-        font-weight: 700;
-        font-size: 65px;
-        line-height: 75px;
+        .HelloTitle {
+            // position: absolute;
 
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.05em;
+            margin-left: 15px;
+            font-family: 'Arial';
+            font-style: italic;
+            font-weight: 700;
+            font-size: 65px;
+            line-height: 75px;
 
-        color: var(--pink-red);
-        z-index: 3;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.05em;
+
+            color: var(--pink-red);
+            z-index: 3;
+        }
     }
 
     .DescriptionTitle {
-        position: absolute;
+        // position: absolute;
+        margin-left: 107px;
+        margin-top: 58px;
         width: 422px;
         height: 68px;
-        left: 107px;
-        top: 332px;
 
         font-family: 'Arial';
         font-style: normal;
@@ -717,7 +720,7 @@
             z-index: 3;
             width: 513px;
             height: 22px;
-            padding-bottom: 40px;
+            padding-bottom: 45px;
 
             font-family: 'Arial';
             font-style: normal;
