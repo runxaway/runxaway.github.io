@@ -228,7 +228,7 @@ const MainPage = (): JSX.Element => {
                         The theme of the project was to create an application - an educational platform.
                     </h2>
                 </div>
-                <h1 className={styles.Copyright}>Designed and coded by Alexander Sharnin © 2022</h1>
+                <h1 className={styles.Copyright}>Designed and coded by Alexander Sharnin © 2023</h1>
             </div>
         </div>
     );
