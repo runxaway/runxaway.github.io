@@ -2,13 +2,15 @@ import webpack from 'webpack';
 import path from 'path';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { Configuration as WebpackConfiguration } from 'webpack';
+import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
 
-const config = {
+const config: webpack.Configuration = {
   mode: 'development',
   entry: './src/index.tsx',
   module: {
