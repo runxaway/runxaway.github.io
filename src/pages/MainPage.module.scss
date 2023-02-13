@@ -150,12 +150,12 @@
             letter-spacing: 0.05em;
 
             color: var(--pink-red);
-            z-index: 3;
+            z-index: 5;
         }
     }
 
     .DescriptionTitle {
-        // position: absolute;
+        position: relative;
         margin-left: 107px;
         margin-top: 58px;
         width: 422px;
@@ -171,7 +171,7 @@
         letter-spacing: 0.05em;
 
         color: var(--light-pink);
-        z-index: 3;
+        z-index: 5;
     }
 
     .Stars1 {
